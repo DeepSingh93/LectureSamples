@@ -7,12 +7,10 @@ public class BrokenBuild
 		System.out.println("BrokenBuild! Pull request 2");
 	}
 	
-	/*
 	public static void DoSomethingToBreakTheBuild()
 	{
 		x
 	}
-	*/
 	
 	public static void DoSomethingToBreakRuntime()
 	{

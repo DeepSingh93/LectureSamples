@@ -4,7 +4,7 @@ public class BrokenBuild
 {
 	public static void DoSomethingBenign()
 	{
-		System.out.println("BrokenBuild!");
+		System.out.println("BrokenBuild! Pull request");
 	}
 	
 	/*

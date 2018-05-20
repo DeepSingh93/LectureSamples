@@ -7,6 +7,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/JUnitExample/JUnitExample.java",
+			"settings":
+			{
+				"buffer_size": 54,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/LectureSamples.java",
+			"settings":
+			{
+				"buffer_size": 525,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -19,6 +37,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
 		],
 		"width": 0.0
 	},
@@ -40,9 +62,19 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/rob/git/LectureSamples",
+		"/Users/rob/git/LectureSamples/src",
+		"/Users/rob/git/LectureSamples/src/JUnitExample"
 	],
 	"file_history":
 	[
+		"/Users/rob/git/LectureSamples/src/JUnit/JUnitExample.java",
+		"/Users/rob/git/LectureSamples/src/LectureSamples.java",
+		"/Users/rob/git/LectureSamples/src/UnitTests/LameStringClass.java",
+		"/Users/rob/git/LectureSamples/src/UnitTests/BusinessLogicFailure.java",
+		"/Users/rob/git/LectureSamples/src/UnitTests/UTest.java",
+		"/Users/rob/git/LectureSamples/src/BrokenBuild/BrokenBuild.java",
+		"/Users/rob/git/LectureSamples/src/UnitTests/UnitTest.Java"
 	],
 	"find":
 	{
@@ -77,8 +109,66 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/JUnitExample/JUnitExample.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								52,
+								52
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/LectureSamples.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								412,
+								412
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -88,7 +178,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"layout":
 	{

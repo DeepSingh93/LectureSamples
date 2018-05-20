@@ -12,7 +12,8 @@ public class BrokenBuild
 	{
 		x
 	}
-*/	
+	*/
+	
 	public static void DoSomethingToBreakRuntime()
 	{
 		int x = 4 / 0;

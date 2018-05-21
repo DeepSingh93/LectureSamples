@@ -24,10 +24,10 @@ public class LibraryTest
 	void GetBooksByGenre()
 	{
 		ArrayList<Book> books = library.GetBooksByGenre("science fiction");
-		assertEquals(books.size(), 1);
-		assertEquals(books.get(0).title, "Flowers For Algernon");
+		assertEquals(1, books.size());
+		assertEquals("Flowers For Algernon", books.get(0).title);
 		books = library.GetBooksByGenre("romance");
-		assertEquals(books.size(), 0);
+		assertEquals(0, books.size());
 	}
 
 	@Test
@@ -35,10 +35,10 @@ public class LibraryTest
 	void GetBooksByAuthor()
 	{
 		ArrayList<Book> books = library.GetBooksByAuthor("Ernest Hemingway");
-		assertEquals(books.size(), 1);
-		assertEquals(books.get(0).title, "Old Man And The Sea");
+		assertEquals(1, books.size());
+		assertEquals("Old Man And The Sea", books.get(0).title);
 		books = library.GetBooksByAuthor("J.K. Rowling");
-		assertEquals(books.size(), 0);
+		assertEquals(0, books.size());
 	}
 
 	@Test
@@ -46,10 +46,10 @@ public class LibraryTest
 	void GetBooksByKeyword()
 	{
 		ArrayList<Book> books = library.GetBooksByKeyword("rabbits");
-		assertEquals(books.size(), 1);
-		assertEquals(books.get(0).title, "Of Mice And Men");
+		assertEquals(1, books.size());
+		assertEquals("Of Mice And Men", books.get(0).title);
 		books = library.GetBooksByKeyword("potato");
-		assertEquals(books.size(), 0);
+		assertEquals(0, books.size());
 	}
 
 	@Test
@@ -57,12 +57,12 @@ public class LibraryTest
 	void GetBooksByPublisher()
 	{
 		ArrayList<Book> books = library.GetBooksByPublisher("McGraw-Hill");
-		assertEquals(books.size(), 3);
+		assertEquals(3, books.size());
 		for (int i = 0; i < books.size(); i++)
 		{
-			assertEquals(books.get(i).publisher.toLowerCase(), "mcgraw-hill");
+			assertEquals("mcgraw-hill", books.get(i).publisher.toLowerCase());
 		}
 		books = library.GetBooksByPublisher("fakepublisher");
-		assertEquals(books.size(), 0);
+		assertEquals(0, books.size());
 	}
 }

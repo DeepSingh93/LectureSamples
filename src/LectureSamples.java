@@ -1,6 +1,5 @@
 import BrokenBuild.BrokenBuild;
 import UnitTests.UTest;
-import JUnitExample.JUnitExample;
 
 public class LectureSamples
 {
@@ -13,11 +12,6 @@ public class LectureSamples
 			{
 				System.out.println("Executing unit tests...");
 				UTest.RunTests();
-			}
-			else if (args[0].equals("junittest"))
-			{
-				System.out.println("Executing JUnit tests...");
-				
 			}
 		}
 		else

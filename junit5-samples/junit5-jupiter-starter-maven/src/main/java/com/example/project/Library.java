@@ -77,6 +77,7 @@ public class Library
 		return booksByKeyword;
 	}
 
+	/*
 	public ArrayList<Book> GetBooksByPublisher(String publisher)
 	{
 		ArrayList<Book> booksByPublisher = new ArrayList<Book>();
@@ -88,6 +89,13 @@ public class Library
 				booksByPublisher.add(book);
 			}
 		}
+		return booksByPublisher;
+	}
+	*/
+
+	public ArrayList<Book> GetBooksByPublisher(String publisher)
+	{
+		ArrayList<Book> booksByPublisher = new ArrayList<Book>();
 		return booksByPublisher;
 	}
 }

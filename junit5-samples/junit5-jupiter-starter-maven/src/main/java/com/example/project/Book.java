@@ -21,6 +21,7 @@ public class Book
 
 	public String CitationString()
 	{
-		return "\"" + title + "\"" + ", " + author + ", Publisher: " + publisher;
+		//return "\"" + title + "\"" + ", " + author + ", Publisher: " + publisher;
+		return "\"" + "\"" + ", " + author + ", Publisher: " + publisher;
 	}
 }

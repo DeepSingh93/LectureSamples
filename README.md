@@ -7,5 +7,3 @@ A hello world java program that demonstrates:
 - Broken software
 - Continuous Integration
 
-# Jenkins
-Adding these lines to test Jenkins

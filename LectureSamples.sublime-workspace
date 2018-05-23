@@ -8,20 +8,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/JUnitExample/JUnitExample.java",
+			"file": "src/UnitTests/LameStringClass.java",
 			"settings":
 			{
-				"buffer_size": 54,
+				"buffer_size": 127,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/LectureSamples.java",
+			"file": "src/UnitTests/UTest.java",
 			"settings":
 			{
-				"buffer_size": 525,
-				"encoding": "UTF-8",
+				"buffer_size": 1724,
 				"line_ending": "Unix"
 			}
 		}
@@ -64,12 +63,17 @@
 	[
 		"/Users/rob/git/LectureSamples",
 		"/Users/rob/git/LectureSamples/src",
-		"/Users/rob/git/LectureSamples/src/JUnitExample"
+		"/Users/rob/git/LectureSamples/src/UnitTests"
 	],
 	"file_history":
 	[
-		"/Users/rob/git/LectureSamples/src/JUnit/JUnitExample.java",
+		"/Users/rob/git/LectureSamples/UnitTestAssignment/DealerResponse.xml",
+		"/Users/rob/git/LectureSamples/UnitTestAssignment/Security.java",
+		"/Users/rob/git/LectureSamples/UnitTestAssignment/PARTMANAGER.java",
+		"/Users/rob/git/LectureSamples/UnitTestAssignment/IncomingOrder.xml",
 		"/Users/rob/git/LectureSamples/src/LectureSamples.java",
+		"/Users/rob/git/LectureSamples/src/JUnitExample/JUnitExample.java",
+		"/Users/rob/git/LectureSamples/src/JUnit/JUnitExample.java",
 		"/Users/rob/git/LectureSamples/src/UnitTests/LameStringClass.java",
 		"/Users/rob/git/LectureSamples/src/UnitTests/BusinessLogicFailure.java",
 		"/Users/rob/git/LectureSamples/src/UnitTests/UTest.java",
@@ -114,19 +118,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/JUnitExample/JUnitExample.java",
+					"file": "src/UnitTests/LameStringClass.java",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 54,
+						"buffer_size": 127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								52,
-								52
+								121,
+								121
 							]
 						],
 						"settings":
@@ -142,19 +146,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/LectureSamples.java",
-					"semi_transient": false,
+					"file": "src/UnitTests/UTest.java",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 525,
+						"buffer_size": 1724,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								412,
-								412
+								402,
+								454
 							]
 						],
 						"settings":
@@ -162,7 +166,7 @@
 							"syntax": "Packages/Java/Java.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 24.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -253,7 +257,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 201.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

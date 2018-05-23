@@ -23,7 +23,7 @@ public class LibraryTest
 	@DisplayName("GetBooksByGenre() test")
 	void GetBooksByGenre()
 	{
-		ArrayList<Book> books = library.GetBooksByGenre("science fiction");
+		ArrayList<Book> books = library.GetBooksByGenre("SCIENCE fiction");
 		assertEquals(1, books.size());
 		assertEquals("Flowers For Algernon", books.get(0).title);
 		books = library.GetBooksByGenre("romance");
@@ -34,6 +34,7 @@ public class LibraryTest
 	@DisplayName("GetBooksByAuthor() test")
 	void GetBooksByAuthor()
 	{
+
 		ArrayList<Book> books = library.GetBooksByAuthor("Ernest Hemingway");
 		assertEquals(1, books.size());
 		assertEquals("Old Man And The Sea", books.get(0).title);

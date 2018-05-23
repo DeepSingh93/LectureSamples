@@ -4,6 +4,6 @@ public class LameStringClass
 {
 	public String concatenateString(String a, String b)
 	{
-		return a;
+		return a + b;
 	}
 }

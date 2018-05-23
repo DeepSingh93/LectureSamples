@@ -7,4 +7,3 @@ A hello world java program that demonstrates:
 - Broken software
 - Continuous Integration
 
-

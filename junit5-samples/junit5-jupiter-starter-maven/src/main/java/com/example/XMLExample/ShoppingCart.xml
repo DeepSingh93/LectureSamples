@@ -1,0 +1,32 @@
+<ShoppingCart>
+	<!-- The customer making the purchase -->
+	<Customer>
+		<!-- The customer email address. -->
+		<Email>rhawkey@dal.ca</Email>
+		<!-- The customer credit card number  -->
+		<CreditCard>4138389928849938</CreditCard>
+	</Customer>
+	<!-- A list of items in the shopping cart. -->
+	<CartItems>
+		<!-- An item in the shopping cart. -->
+		<Item>
+			<!-- The item unique identifier in the sites database -->
+			<UniqueID>1234</UniqueID>
+			<!-- The quantity ordered. -->
+			<Quantity>2</Quantity>
+		</Item>
+		<!-- Another item, there can be an unlimited number of items in the CartItems list. -->
+		<Item>
+			<UniqueID>5678</UniqueID>
+			<Quantity>1</Quantity>
+		</Item>
+	</CartItems>
+	<!-- The delivery address to send the order to. -->
+	<DeliveryTo>
+		<Name>Mrs. Jane Smith</Name>
+		<Street>35 Streetname</Street>
+		<City>Halifax</City>
+		<Province>NS</Province>
+		<PostalCode>B2T1A4</PostalCode>
+	</DeliveryTo>
+</ShoppingCart>

@@ -11,6 +11,7 @@ public interface PARTMANAGER
 {
 	public enum PartResponse
 	{
+		SUCCESS,
 		OUT_OF_STOCK,
 		NO_LONGER_MANUFACTURED
 	}

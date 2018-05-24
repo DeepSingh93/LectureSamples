@@ -25,7 +25,7 @@ public class Library
 			String[] genres = book.genre.toLowerCase().split(",");
 			for (int j = 0; j < genres.length; j++)
 			{
-				if (genres[j].equals(genre))
+				if (genres[j].equals(genre.toLowerCase()))
 				{
 					addBook = true;
 					break;

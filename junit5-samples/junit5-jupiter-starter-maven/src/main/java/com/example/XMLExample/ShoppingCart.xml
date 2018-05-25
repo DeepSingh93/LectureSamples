@@ -1,3 +1,6 @@
+<!-- This is the structure of the ShoppingCart XML.  XML
+	 does not care about capitilization, shoppingcart = SHOPPINGCART = ShoppingCart, etc..
+	 However the JAXB parser DOES care about capitilization, you need to solve for this. -->
 <ShoppingCart>
 	<!-- The customer making the purchase -->
 	<Customer>
@@ -7,20 +10,20 @@
 		<CreditCard>4138389928849938</CreditCard>
 	</Customer>
 	<!-- A list of items in the shopping cart. -->
-	<CartItems>
+	<cartitems>
 		<!-- An item in the shopping cart. -->
-		<Item>
+		<item>
 			<!-- The item unique identifier in the sites database -->
 			<UniqueID>1234</UniqueID>
 			<!-- The quantity ordered. -->
 			<Quantity>2</Quantity>
-		</Item>
-		<!-- Another item, there can be an unlimited number of items in the CartItems list. -->
-		<Item>
+		</item>
+		<!-- Another item, there can be an unlimited number of items in the cartitems list. -->
+		<item>
 			<UniqueID>5678</UniqueID>
 			<Quantity>1</Quantity>
-		</Item>
-	</CartItems>
+		</item>
+	</cartitems>
 	<!-- The delivery address to send the order to. -->
 	<DeliveryTo>
 		<Name>Mrs. Jane Smith</Name>

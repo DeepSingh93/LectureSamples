@@ -17,6 +17,13 @@ public class Customer
 	</Customer>
 	*/
 
+	public static enum CreditCardResults
+	{
+		INVALID_CREDIT_CARD,
+		CREDIT_CARD_CHARGE_FAILURE,
+		SUCCESS
+	};
+
 	String email;
 	String creditCard;
 
@@ -39,4 +46,39 @@ public class Customer
 	{
 		return creditCard;
 	}
+
+	// Charge the customer for the order.
+	public CreditCardResults ChargeCreditCard(float amount, ICreditCardProcessor processor) throws Exception
+	{
+		try
+		{
+			if (processor.IsCreditCardValid(creditCard))
+			{
+				if (processor.ChargeCreditCard(creditCard, amount))
+				{
+					return CreditCardResults.SUCCESS;
+				}
+				else
+				{
+					return CreditCardResults.CREDIT_CARD_CHARGE_FAILURE;
+				}
+			}
+			else
+			{
+				return CreditCardResults.INVALID_CREDIT_CARD;
+			}
+
+		}
+		catch (Exception e)
+		{
+			System.out.println("Exception charging the credit card!");
+			throw e;
+		}
+	}
 }
+
+
+
+
+
+

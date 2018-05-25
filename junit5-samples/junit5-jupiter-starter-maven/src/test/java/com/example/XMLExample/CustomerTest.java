@@ -2,10 +2,12 @@ package com.example.XMLExample;
 
 //import java.io.File;
 import java.io.StringWriter;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import javax.xml.bind.JAXBContext;
@@ -14,6 +16,19 @@ import javax.xml.bind.Marshaller;
 
 public class CustomerTest
 {
+	// This is the mock ICreditCardProcessor object.
+	static ICreditCardProcessor cardProcessor;
+
+	@BeforeAll
+	static void initAll()
+	{
+		ArrayList<String> validCreditCards = new ArrayList<String>();
+		validCreditCards.add("4138389928849938");
+		validCreditCards.add("1234567890123456");
+		validCreditCards.add("0987654321098765");
+		cardProcessor = new CreditCardProcessorMock(validCreditCards);
+	}
+
 	@Test
 	@DisplayName("CustomerTest - Testing serializing the Customer object")
 	void customerSerializationTest()
@@ -81,4 +96,71 @@ public class CustomerTest
 	    	fail("Failed to output Customer object to XML");
 	    }
 	}
+
+	/*
+		The following are tests that make use of the CreditCardProcessorMock mock object.  This is similar to what you'll do
+		with the Security interface in the assignment.
+	*/
+	@Test
+	@DisplayName("InvalidCreditCardTest")
+	void invalidCreditCardTest()
+	{
+		Customer customer = new Customer();
+		customer.setEmail("rhawkey@dal.ca");
+		customer.setCreditCard("4");
+		try
+		{
+			assertEquals(Customer.CreditCardResults.INVALID_CREDIT_CARD, customer.ChargeCreditCard(200.0f, cardProcessor));
+		}
+		catch (Exception e)
+		{
+			fail("Failed calling ChargeCreditCard() in InvalidCreditCardTest");
+		}
+	}
+
+	@Test
+	@DisplayName("CreditCardChargeFailureTest")
+	void creditCardChargeFailureTest()
+	{
+		try
+		{
+			Customer customer = new Customer();
+			customer.setEmail("rhawkey@dal.ca");
+			customer.setCreditCard("4138389928849938");
+			assertEquals(Customer.CreditCardResults.CREDIT_CARD_CHARGE_FAILURE, customer.ChargeCreditCard(1.0f, cardProcessor));
+		}
+		catch (Exception e)
+		{
+			fail("Failed calling ChargeCreditCard() in CreditCardChargeFailureTest");
+		}
+	}
+
+	@Test
+	@DisplayName("CreditCardChargeSuccessTest")
+	void creditCardChargeSuccessTest()
+	{
+		try
+		{
+			Customer customer = new Customer();
+			customer.setEmail("rhawkey@dal.ca");
+			customer.setCreditCard("4138389928849938");
+			assertEquals(Customer.CreditCardResults.SUCCESS, customer.ChargeCreditCard(200.0f, cardProcessor));
+		}
+		catch (Exception e)
+		{
+			fail("Failed calling ChargeCreditCard() in CreditCardChargeSuccessTest");
+		}
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,8 +9,8 @@ import com.example.designpatterns.creational.*;
 // - This is the ONLY thing the client will depend on to create objects for the maze
 public interface IMazeFactory
 {
-	public Maze makeMaze();
-	public Room makeRoom(int roomNumber);
-	public Door makeDoor(Room room1, Room room2);
-	public Wall makeWall();
+	public Maze MakeMaze();
+	public Room MakeRoom(int roomNumber);
+	public Door MakeDoor(Room room1, Room room2);
+	public Wall MakeWall();
 }

@@ -22,26 +22,26 @@ public class ExplosiveMazeFactory implements IMazeFactory
 		the good OOP design pattern magic is happening.
 	*/
 	@Override
-	public Maze makeMaze()
+	public Maze MakeMaze()
 	{
 		// I don't need a special Maze object, I'll just return the base one.
 		return new Maze();
 	}
 
 	@Override
-	public Room makeRoom(int roomNumber)
+	public Room MakeRoom(int roomNumber)
 	{
 		return new ExplosiveRoom(roomNumber);
 	}
 
 	@Override
-	public Door makeDoor(Room room1, Room room2)
+	public Door MakeDoor(Room room1, Room room2)
 	{
 		return new ExplosiveDoor(room1, room2);
 	}
 
 	@Override
-	public Wall makeWall()
+	public Wall MakeWall()
 	{
 		return new ExplosiveWall();
 	}

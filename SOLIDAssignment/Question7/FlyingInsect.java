@@ -1,4 +1,4 @@
-public class AquaticInsect implements IInsect
+public class FlyingInsect implements IInsect
 {
 	public void Swim()
 	{

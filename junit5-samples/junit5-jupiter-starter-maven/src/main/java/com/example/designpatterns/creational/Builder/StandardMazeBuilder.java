@@ -75,7 +75,6 @@ public class StandardMazeBuilder extends MazeBuilder
 	@Override
 	public Maze GetMaze()
 	{
-		Maze maze = new Maze();
 		return maze;
 	}
 	

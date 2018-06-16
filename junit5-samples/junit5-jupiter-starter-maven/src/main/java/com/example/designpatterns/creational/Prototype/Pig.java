@@ -10,6 +10,6 @@ public class Pig extends Animal implements ICloneable
 	@Override
 	public Object Clone()
 	{
-		return new Sheep(noiseIMake);
+		return new Pig(noiseIMake);
 	}
 }

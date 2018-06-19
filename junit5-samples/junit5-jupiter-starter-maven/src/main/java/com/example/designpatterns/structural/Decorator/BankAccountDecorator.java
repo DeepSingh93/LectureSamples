@@ -1,5 +1,8 @@
 package com.example.designpatterns.structural.Decorator;
 
+// Note this class is abstract, it's not meant to be instantiated, but is
+// written this way so that we can provide default implementations of methods
+// so decorators only have to override the methods they want to.
 public abstract class BankAccountDecorator implements IBankAccount
 {
 	protected IBankAccount decoratedBankAccount;

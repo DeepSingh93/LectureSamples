@@ -28,11 +28,13 @@ public abstract class Logger
 	// its concrete way is
    public void Log(int level, String message)
 	{
+		// Note tht the Chain of Responsibility STOPS once an object decides
+		// to handle the request.
       if (logLevel == level)
 		{
          LogMessage(message);
       }
-      if (null != nextLogger)
+		else if (null != nextLogger)
 		{
          nextLogger.Log(level, message);
       }

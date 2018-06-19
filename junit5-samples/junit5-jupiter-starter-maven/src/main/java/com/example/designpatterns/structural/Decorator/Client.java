@@ -6,7 +6,7 @@ public class Client
 	{
 		/*
 			Note:
-			The following is a possible solution to Assignment 2 / Question 4.
+			The following is a possible solution to Assignment 2 Question 4.
 			In that question the USDollarAccount violated the Liskov Substitution Principle.
 			It violated LSP because LSP states that instances of base classes must be substitutable
 			with instances of subclasses without changing the program's behaviour.
@@ -19,11 +19,14 @@ public class Client
 		account.Credit(200.0f);
 		account.Debit(100.0f);
 		System.out.println("Balance = " + account.GetBalance()); // Outputs 100.0
+		account.Debit(100.0f);
 		
 		// Note how when we instantiate the decorator we always pass it an object to decorate.
-		IBankAccount usDollarAccount = new ForeignCurrencyBankAccountDecorator(new BankAccount(), 0.75f);
-		usDollarAccount.Credit(200.0f);
-		usDollarAccount.Debit(100.0f);
+		// We can swap between using the decorator or the original object when we want behaviour
+		// to change.
+		account = new ForeignCurrencyBankAccountDecorator(account, 0.75f);
+		account.Credit(200.0f);
+		account.Debit(100.0f);
 		System.out.println("Balance = " + account.GetBalance()); // Outputs 75.0
 	}
 }

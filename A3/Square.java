@@ -33,12 +33,6 @@ public class Square extends BoardComponent
 	@Override
 	public void Remove(BoardComponent child)
 	{
-		// If I this is my last child and I have a parent I must
-		// remove myself from my parent too (the square is destroyed)
 		children.remove(child);
-		if (null != parent && children.isEmpty())
-		{
-			parent.Remove(this);
-		}
 	}
 }

@@ -32,7 +32,7 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 		{
 			// Make an array for each row.
 			ArrayList<BoardComponent> row = new ArrayList<>();
-			// Add a squares equal to the width to the row.
+			// Add squares equal to the width to the row.
 			for (int j = 0; j < width; j++)
 			{
 				row.add(MakeSquare());
@@ -87,8 +87,11 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 			case "SPAWN_SHIELD":
 			{
 				// TODO:  Implement a command that uses the Decorator pattern to decorate
-				//        a building object with a shield.  The shield will have health,
-				//        like the building.  The health is passed as an argument for the command.
+				//        a Square object with a shield.  The shield will have health,
+				//        like a building.  The health is passed as an argument for the command.
+				//			 While the shield is alive buildings in the square do not take damage from
+				//			 asteroid impacts.  When the shield health hits 0 it is destroyed and
+				//			 removed from decorating the Square.
 			}
 		}
 		return null;

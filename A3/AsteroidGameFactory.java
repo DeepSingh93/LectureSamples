@@ -88,7 +88,7 @@ public class AsteroidGameFactory implements IAsteroidGameFactory
 			{
 				// TODO:  Implement a command that uses the Decorator pattern to decorate
 				//        a Square object with a shield.  The shield will have health,
-				//        like a building.  The health is passed as an argument for the command.
+				//        like a building, hard coded to 2 health in the decorator object.
 				//			 While the shield is alive buildings in the square do not take damage from
 				//			 asteroid impacts.  When the shield health hits 0 it is destroyed and
 				//			 removed from decorating the Square.

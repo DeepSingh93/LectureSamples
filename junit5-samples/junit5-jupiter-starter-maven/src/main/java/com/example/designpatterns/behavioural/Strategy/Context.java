@@ -9,6 +9,11 @@ public class Context
 		this.strategy = strategy;
 	}
 	
+	public void ChangeStrategy(IStrategy strategy)
+	{
+		this.strategy = strategy;
+	}
+	
 	public String ExecuteStrategy(String input)
 	{
 		return strategy.DoOperation(input);

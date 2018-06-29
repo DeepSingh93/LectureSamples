@@ -15,9 +15,10 @@ public class Square extends BoardComponent
 	@Override
 	public void Operation()
 	{
-		for (int i = 0; i < children.size(); i++)
+		ArrayList<BoardComponent> childrenCopy = new ArrayList<BoardComponent>(children);
+		for (int i = 0; i < childrenCopy.size(); i++)
 		{
-			BoardComponent child = children.get(i);
+			BoardComponent child = childrenCopy.get(i);
 			child.Operation();
 		}
 	}

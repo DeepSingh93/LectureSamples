@@ -2,7 +2,7 @@ package com.example.designpatterns.behavioural.Strategy;
 
 public class Context
 {
-	private final IStrategy strategy;
+	private IStrategy strategy;
 	
 	public Context(IStrategy strategy)
 	{

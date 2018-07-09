@@ -20,11 +20,11 @@ public class Main
 		obj.DoSomething();
 		VeryImportantClass obj2 = new VeryImportantClass();
 		obj2.DoSomething();
-		
+
+		/*
 		ErrorHandling error = new ErrorHandling();
 		error.StepThroughYourCode();
-		
-		/*
+
 		ErrorHandling error = new ErrorHandling();
 		error.DoSomethingYouCanRecoverFrom("testfile.txt");
 		try
@@ -37,5 +37,16 @@ public class Main
 		}
 		error.DoSomethingFatal();
 		*/
+		
+		Exceptions exception = new Exceptions();
+		exception.DoSomething();
+		try
+		{
+			exception.DoSomething2();
+		}
+		catch (Exception ex)
+		{
+			logger.error("DoSomething2() error!", ex);
+		}
 	}
 }

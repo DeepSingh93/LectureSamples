@@ -11,7 +11,7 @@
 		<!-- This will turn off the output of a given class, you can do this
 			  on specific environments, or when a class becomes stable to reduce
 			  the noise level in your logs. -->
-		<logger name="example.logging.NormalClass" additivity="false" level="OFF">
+		<logger name="example.logging.NormalClass" additivity="false" level="info">
 			<AppenderRef ref="Console"/>
 		</logger>
 		<!-- This is how you ensure no matter the other settings a very important

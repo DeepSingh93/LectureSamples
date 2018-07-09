@@ -115,17 +115,15 @@ public class ErrorHandling
 			}
 		}
 		
-		/*
 		boolean y = false;
-		if (y = true)
+		if (y == true)
 		{
 			System.out.println("This one gets through...");
 		}
-		if (true = y)
+		if (true == y)
 		{
 			System.out.println("The compiler catches this one, can't screw this up.");
 		}
-		*/
 	}
 	
 	public void StepThroughYourCode()

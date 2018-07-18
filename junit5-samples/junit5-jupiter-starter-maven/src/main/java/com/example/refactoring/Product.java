@@ -10,7 +10,7 @@ public class Product extends Nameable implements IProduct
 
 	public Product(String name, List<IMaterial> materialList, List<Integer> materialUnitCounts)
 	{
-		// PULL UP FIELD
+		// PUSH DOWN FIELD
 		SetName(name);
 		this.materials = materialList;
 		this.materialUnitCounts = materialUnitCounts;

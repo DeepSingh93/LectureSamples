@@ -2,7 +2,7 @@ package com.example.refactoring;
 
 public class Material extends Nameable implements IMaterial
 {
-	// REPLACE TYPE CODE WITH CLASS (Make NonDiscountableMaterial class inherit Material and override IsDiscountable)
+	// REPLACE TYPE CODE WITH SUBCLASSES (Make NonDiscountableMaterial class inherit Material and override IsDiscountable)
 	public enum Discountable
 	{
 		YES,
@@ -14,7 +14,7 @@ public class Material extends Nameable implements IMaterial
 	
 	public Material(String name, float baseCost, Discountable canDiscount)
 	{
-		// PULL UP FIELD
+		// PUSH DOWN FIELD
 		SetName(name);
 		this.baseCost = baseCost;
 		this.canDiscount = canDiscount;

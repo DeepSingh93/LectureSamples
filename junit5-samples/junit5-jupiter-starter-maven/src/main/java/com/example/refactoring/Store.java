@@ -2,28 +2,20 @@ package com.example.refactoring;
 
 import java.util.List;
 import java.util.ListIterator;
-import java.lang.StringBuilder;
 
 public class Store
 {
 	private final List<IProduct> allProducts;
 	private final List<IPromotion> allPromotions;
 	private static final float PROFIT_MARGIN = 0.30f;
-	private final String street;
-	private final String city;
-	private final String province;
-	private final String postalCode;
+	private final Address address;
 	
 	// INTRODUCE PARAMETER OBJECT
-	public Store(IProductDatabase db, IPromotionDatabase promoDB, String street, String city, String province, String postalCode)
+	public Store(IProductDatabase db, IPromotionDatabase promoDB, Address address)
 	{
 		allProducts = db.GetAllProducts();
 		allPromotions = promoDB.GetAllPromotions();
-		// EXTRACT CLASS
-		this.street = street;
-		this.city = city;
-		this.province = province;
-		this.postalCode = postalCode;
+		this.address = address;
 	}
 	
 	public float CalculateValueAllStock()
@@ -38,6 +30,21 @@ public class Store
 		return sum;
 	}
 	
+	private float GetProductDiscount(IProduct product)
+	{
+		float discount = 0.0f;
+		ListIterator<IPromotion> promotionIter = allPromotions.listIterator();
+		while (promotionIter.hasNext())
+		{
+			IPromotion promotion = promotionIter.next();
+			if (promotion.AppliesToProduct(product))
+			{
+				discount = Math.max(discount, promotion.GetPercentageDiscount());
+			}
+		}
+		return discount;
+	}
+	
 	public float CalculateMarketValueAllStock()
 	{
 		float sum = 0.0f;
@@ -45,20 +52,10 @@ public class Store
 		while (iter.hasNext())
 		{
 			IProduct product = iter.next();
-			// EXTRACT METHOD(S)
-			float discount = 0.0f;
-			ListIterator<IPromotion> promotionIter = allPromotions.listIterator();
-			while (promotionIter.hasNext())
-			{
-				IPromotion promotion = promotionIter.next();
-				if (promotion.AppliesToProduct(product))
-				{
-					discount = Math.max(discount, promotion.GetPercentageDiscount());
-				}
-			}
-			// INTRODUCE EXPLAINING VARIABLE
-			// The market value for a product is the material cost + profit margin - any discounts applied.
-			sum += (product.CalculateMaterialCost() + (product.CalculateMaterialCost() * PROFIT_MARGIN)) - ((product.CalculateMaterialCost() + (product.CalculateMaterialCost() * PROFIT_MARGIN)) * discount);
+			float discount = GetProductDiscount(product);
+			float baseCost = product.CalculateMaterialCost();
+			float baseCostPlusProfitMargin = baseCost + (baseCost * PROFIT_MARGIN);
+			sum += baseCostPlusProfitMargin - (baseCostPlusProfitMargin * discount);
 
 			// REPLACE CONDITIONAL WITH POLYMORPHISM
 			// Add cooking fee!
@@ -89,14 +86,6 @@ public class Store
 	// EXTRACT CLASS
 	public String GetContactInfo()
 	{
-		StringBuilder contactInfo = new StringBuilder();
-		contactInfo.append(street);
-		contactInfo.append("\n");
-		contactInfo.append(city);
-		contactInfo.append("\n");
-		contactInfo.append(province);
-		contactInfo.append("\n");
-		contactInfo.append(postalCode);
-		return contactInfo.toString();
+		return address.BuildContactInfoString();
 	}
 }

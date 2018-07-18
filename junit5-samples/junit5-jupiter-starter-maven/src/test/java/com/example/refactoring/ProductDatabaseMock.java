@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 public class ProductDatabaseMock implements IProductDatabase
 {
-	private final IMaterial flour = new Material("flour", 0.01f, Material.Discountable.YES);
-	private final IMaterial salt = new Material("salt", 0.01f, Material.Discountable.YES);
-	private final IMaterial yeast = new Material("yeast", 0.01f, Material.Discountable.YES);
-	private final IMaterial milk = new Material("milk", 1.00f, Material.Discountable.YES);
-	private final IMaterial egg = new Material("egg", 0.20f, Material.Discountable.YES);
-	private final IMaterial potato = new Material("potato", 0.05f, Material.Discountable.YES);
-	private final IMaterial oil = new Material("oil", 0.05f, Material.Discountable.YES);
-	private final IMaterial apple = new Material("apple", 0.10f, Material.Discountable.NO);
+	private final IMaterial flour = new DiscountableMaterial("flour", 0.01f);
+	private final IMaterial salt = new DiscountableMaterial("salt", 0.01f);
+	private final IMaterial yeast = new DiscountableMaterial("yeast", 0.01f);
+	private final IMaterial milk = new DiscountableMaterial("milk", 1.00f);
+	private final IMaterial egg = new DiscountableMaterial("egg", 0.20f);
+	private final IMaterial potato = new DiscountableMaterial("potato", 0.05f);
+	private final IMaterial oil = new DiscountableMaterial("oil", 0.05f);
+	private final IMaterial apple = new FixedPriceMaterial("apple", 0.10f);
 	
 	private IProduct CreateBread()
 	{

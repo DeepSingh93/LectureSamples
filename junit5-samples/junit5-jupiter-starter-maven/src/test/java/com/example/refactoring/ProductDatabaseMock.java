@@ -28,7 +28,7 @@ public class ProductDatabaseMock implements IProductDatabase
 		materialUnitCounts.add(2);
 		materials.add(egg);
 		materialUnitCounts.add(1);
-		return new Product("bread", materials, materialUnitCounts);
+		return new BreadProduct("bread", materials, materialUnitCounts);
 	}
 	
 	private IProduct CreateApplePie()
@@ -45,7 +45,7 @@ public class ProductDatabaseMock implements IProductDatabase
 		materialUnitCounts.add(2);
 		materials.add(apple);
 		materialUnitCounts.add(5);
-		return new Product("apple pie", materials, materialUnitCounts);
+		return new PieProduct("apple pie", materials, materialUnitCounts);
 	}
 	
 	
@@ -57,7 +57,7 @@ public class ProductDatabaseMock implements IProductDatabase
 		materialUnitCounts.add(5);
 		materials.add(oil);
 		materialUnitCounts.add(1);
-		return new Product("potato chips", materials, materialUnitCounts);
+		return new ChipsProduct("potato chips", materials, materialUnitCounts);
 	}
 	
 	private IProduct CreateMilk()

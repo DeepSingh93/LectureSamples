@@ -8,4 +8,5 @@ public interface IProduct
 	public String GetProductName();
 	public List<IMaterial> GetMaterials();
 	public IMaterial GetMaterialWithName(String name);
+	public float GetCookingFee();
 }
